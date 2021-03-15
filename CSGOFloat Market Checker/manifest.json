@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "css": [ "float.css" ],
+      "js": [ "lib/filtrex.js", "lib/utils.js", "lib/filters.js", "float.js" ],
+      "matches": [ "*://*.steamcommunity.com/market/listings/730/*", "*://*.steamcommunity.com/id/*/inventory*", "*://*.steamcommunity.com/profiles/*/inventory*" ]
+   } ],
+   "description": "Dedicated API for fetching the float value, paint seed, and screenshots of CS:GO items on the Steam Market",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmf6qYyrFypvvB0klM/hHhIdGO0bAnUT6ZK4fLqGl8/l5OWze2leeQkC/Nf0HOTQ50d2sdgXFuQDfHsMF+HQ5pUVIUT/25MzEXZWGwqi+JAxEX9Q/yGFFN53nI4m7mGNzCQ0TDUS3IrJsFfQBMEdv/fAwnhEitF/Ko9qn8/KYDzZqIjujwXKKeqlx+UXIvkgblI44RT9evwiqp+/WjZZ/YQzLa9tFhdz0Ct3Qvhn/03YrLAXa+yxXKpLAjQJ9DpYJoa++bJwluffinxKQUX0tm5dzFRSRKFCG92hKHnQHcQFUnBlDKF4LS0KQhgelyiTxN4GmKX7I1xQS/B1TByLL2wIDAQAB",
+   "manifest_version": 2,
+   "name": "CSGOFloat Market Checker",
+   "permissions": [ "https://api.csgofloat.com:1738/*", "*://*.steamcommunity.com/market/listings/730/*", "*://*.steamcommunity.com/id/*/inventory*", "*://*.steamcommunity.com/profiles/*/inventory*", "storage" ],
+   "short_name": "CSGOFloat",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.0",
+   "web_accessible_resources": [ "model_frame.html", "model_frame.js" ]
+}
